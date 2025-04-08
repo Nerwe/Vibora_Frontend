@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { Cake as Snake, Sun, Moon, User } from 'lucide-react';
+import { Sun, Moon, User, Podcast } from 'lucide-react';
 import { useTheme } from '../hooks/useTheme';
 import { useAuth } from '../context/AuthContext';
 
@@ -13,7 +13,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2">
-            <Snake className="h-8 w-8 text-primary-500" />
+            <Podcast className="h-8 w-8 text-primary-500" />
             <span className="text-2xl font-bold">Vibora</span>
           </Link>
 

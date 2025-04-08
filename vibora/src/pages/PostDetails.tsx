@@ -111,7 +111,7 @@ const PostDetails = () => {
                 value={newComment}
                 onChange={e => setNewComment(e.target.value)}
                 rows={3}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                className="p-1 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                 placeholder="Add a comment..."
                 required
               />

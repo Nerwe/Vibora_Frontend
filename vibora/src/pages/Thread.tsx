@@ -46,7 +46,17 @@ const ThreadPage = () => {
     fetchThreadData();
   }, [id]);
 
-  const getAuthor = (userId: string): User | undefined => users.find(user => user.id === userId);
+  const getAuthor = (userId: string): User | undefined => {
+    const user = users.find(user => user.id === userId);
+    if (!user) {
+      getUser(userId).then(fetchedUser => {
+        if (fetchedUser) {
+          setUsers(prevUsers => [...prevUsers, fetchedUser]);
+        }
+      });
+    }
+    return user;
+  };
 
   const handleNewPost = async (e: React.FormEvent) => {
     e.preventDefault();
